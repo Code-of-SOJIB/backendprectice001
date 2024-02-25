@@ -1,5 +1,5 @@
 let secureApi = (req,res,next) => {
-    console.log("ami")
+    console.log("ami",req.headers)
     
     if (req.headers.authorizaition == "w70AEQPO5HOJUn") {
         next();
@@ -11,4 +11,4 @@ let secureApi = (req,res,next) => {
 
 
 //  mongodb+srv://newmernian:@cluster0.zkgjyio.mongodb.net/mernian?retryWrites=true&w=majority&appName=Cluster0
-module.exports = secureApi
+module.exports = secureApi;
